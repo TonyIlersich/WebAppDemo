@@ -6,8 +6,8 @@ Built on HTML5 using NodeJS, jQuery, and WebGL.
 
 ### To access the site
 
-Go to [http://webgamedemo-env.94gcnkrqey.us-west-2.elasticbeanstalk.com/].
+Go to <http://webgamedemo-env.94gcnkrqey.us-west-2.elasticbeanstalk.com/>.
 
 ### To run locally
 
-Run `npm start` to start the server. Access the site at [http://localhost:8081].
+Run `npm start` to start the server. Access the site at <http://localhost:8081>.
