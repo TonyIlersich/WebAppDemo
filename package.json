@@ -6,8 +6,7 @@
 		"aws-sdk": "latest",
 		"body-parser": "latest",
 		"ejs": "latest",
-		"express": "latest",
-		"phaser": "^3.19.0"
+		"express": "latest"
 	},
 	"scripts": {
 		"start": "node app.js"
