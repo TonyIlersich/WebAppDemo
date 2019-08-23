@@ -6,9 +6,10 @@
 		"aws-sdk": "latest",
 		"body-parser": "latest",
 		"ejs": "latest",
-		"express": "latest"
+		"express": "latest",
+		"shelljs": "latest"
 	},
 	"scripts": {
-		"start": "node app.js"
+		"start": "node server.js"
 	}
 }
