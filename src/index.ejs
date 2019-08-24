@@ -7,9 +7,17 @@
 		
 		<title>Web App Demo</title>
 		
+		<!--external imports: jQuery, Phaser-->
 		<script src='https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js'></script>
 		<script src='//cdn.jsdelivr.net/npm/phaser@3.19.0/dist/phaser.js'></script>
-		<script type='text/javascript' src='game.js'></script>
+		
+		<!--scripts (order is important)-->
+		<script type='text/javascript' src='canvasManager.js'></script>
+		<script type='text/javascript' src='gameManager.js'></script>
+		<script type='text/javascript' src='main.js'></script>
+		
+		<!--stylesheet-->
+		<link rel="stylesheet" href="styles.css">
 		
 	</head>
 	
