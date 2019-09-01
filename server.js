@@ -16,19 +16,19 @@ function startServer() {
 
 	app.get('/', (req, res) => res.render('index'));
 	
-	shelljs.cd('src/scripts');
-	shelljs.ls().forEach(fileName => {
-		console.log(`creating endpoint for ${fileName}`);
-		app.get(`/${fileName}`, (req, res) => {
-			res.status(200).sendFile(`${__dirname}/src/scripts/${fileName}`);
-		});
-	});
+	const srcFiles = [
+		'scripts/canvasManager.js',
+		'scripts/gameManager.js',
+		'scripts/main.js',
+		'scripts/scenes/TitleScene.js',
+		'scripts/scenes/ArenaScene.js',
+		'stylesheets/styles.css'
+	];
 	
-	shelljs.cd('../stylesheets');
-	shelljs.ls().forEach(fileName => {
+	srcFiles.forEach(fileName => {
 		console.log(`creating endpoint for ${fileName}`);
 		app.get(`/${fileName}`, (req, res) => {
-			res.status(200).sendFile(`${__dirname}/src/styleSheets/${fileName}`);
+			res.status(200).sendFile(`${__dirname}/src/${fileName}`);
 		});
 	});
 	

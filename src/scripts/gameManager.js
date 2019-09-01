@@ -3,14 +3,15 @@ const resolution = {
 	y: 1080
 };
 
-let _phaserGame;
+let phaserGame;
 
-const startGame = (update) => {
+const startGame = () => {
 	const config = {
 		type: Phaser.WEBGL,
 		canvas: $('#phaserCanvas')[0],
 		width: resolution.x,
 		height: resolution.y,
+		scene: [TitleScene, ArenaScene],
 		physics: {
 			default: 'arcade',
 			arcade: {
@@ -19,26 +20,9 @@ const startGame = (update) => {
 				}
 			}
 		},
-		scene: {
-			preload: preload,
-			create: create,
-			update: update
-		}
 	};
 	
-	_phaserGame = new Phaser.Game(config);
-	
-	function preload() {
-		// load assets here
-	};
-	
-	function create() {
-		fpsText = this.add.text(
-			0, 0,
-			'loading...',
-			{ fontFamily: 'Courier New' }
-		);
-	};
+	phaserGame = new Phaser.Game(config);
 }
 
 // returns {x, y} where {0, 0} is top left, {1920, 1080} is bottom right.
